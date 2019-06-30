@@ -1,0 +1,8 @@
+prefix=/home/ros-industrial/catkin_ws/install
+
+Name: tm700_gripper_test
+Description: Description of tm700_gripper_test
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/ros-industrial/catkin_ws/install/lib 
+Requires: roscpp tm_driver

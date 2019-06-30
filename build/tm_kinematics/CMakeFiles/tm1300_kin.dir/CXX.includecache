@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/ros-industrial/catkin_ws/src/tm_kinematics/include/tm_kinematics/tm_kin.h
+
+/home/ros-industrial/catkin_ws/src/tm_kinematics/src/tm_kin.cpp
+tm_kinematics/tm_kin.h
+/home/ros-industrial/catkin_ws/src/tm_kinematics/src/tm_kinematics/tm_kin.h
+math.h
+-
+stdio.h
+-
+
