@@ -314,7 +314,7 @@
     <!-- ROS base to TM 'base_link' Coordinates transform -->
     <link name="${prefix}base"/>
     <joint name="${prefix}base-base_link" type="fixed">
-      <origin xyz="-0.15 0 0.778015" rpy="0 0 0"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
       <parent link="${prefix}base"/>
       <child link="${prefix}base_link"/>
     </joint>

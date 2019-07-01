@@ -1,8 +1,0 @@
-prefix=/home/ros-industrial/catkin_ws/devel
-
-Name: realtime_tools
-Description: Description of realtime_tools
-Version: 1.11.1
-Cflags: -I/home/ros-industrial/catkin_ws/src/realtime_tools/include
-Libs: -L/home/ros-industrial/catkin_ws/devel/lib -lrealtime_tools
-Requires: roscpp rospy

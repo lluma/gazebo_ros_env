@@ -19,7 +19,7 @@
   </include>
 
   <!-- push robot_description to factory and spawn robot in gazebo -->
-  <node name="spawn_gazebo_model" pkg="gazebo_ros" type="spawn_model" args="-urdf -param robot_description -model tm700" respawn="false" output="screen" />
+  <node name="spawn_gazebo_model" pkg="gazebo_ros" type="spawn_model" args="-urdf -param robot_description -model tm700 -x -0.15 -y 0 -z 0.778015" respawn="false" output="screen" />
 
   <include file="$(find tm_gazebo)/launch/controller_utils.launch"/>
 

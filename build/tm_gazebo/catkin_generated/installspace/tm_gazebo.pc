@@ -1,8 +1,0 @@
-prefix=/home/ros-industrial/catkin_ws/install
-
-Name: tm_gazebo
-Description: Description of tm_gazebo
-Version: 1.1.5
-Cflags: 
-Libs: -L/home/ros-industrial/catkin_ws/install/lib 
-Requires: 

@@ -1,8 +1,0 @@
-prefix=/home/ros-industrial/catkin_ws/install
-
-Name: tm_kinematics
-Description: Description of tm_kinematics
-Version: 0.0.0
-Cflags: -I/home/ros-industrial/catkin_ws/install/include -I/usr/include
-Libs: -L/home/ros-industrial/catkin_ws/install/lib -ltm700_kin -ltm900_kin -ltm700_moveit_plugin -ltm900_moveit_plugin -ltm1100_kin -ltm1300_kin -ltm1100_moveit_plugin -ltm1300_moveit_plugin /usr/lib/x86_64-linux-gnu/libboost_system.so
-Requires: roscpp geometry_msgs moveit_core moveit_ros_planning pluginlib tf_conversions
