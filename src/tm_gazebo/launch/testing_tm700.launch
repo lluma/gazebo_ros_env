@@ -6,8 +6,8 @@
   <arg name="gui" default="true"/>
   
   <!-- startup simulated world -->
-  <include file="$(find tm_gazebo)/launch/test_env.launch">
-    <arg name="world_name" default="$(find tm_gazebo)/worlds/new_env.world"/>
+  <include file="$(find tm_gazebo)/launch/testing_env.launch">
+    <arg name="world_name" default="$(find tm_gazebo)/worlds/testing_world.world"/>
     <arg name="paused" value="$(arg paused)"/>
     <arg name="gui" value="$(arg gui)"/>
   </include>
