@@ -1,0 +1,36 @@
+<?xml version="1.0" ?>
+<sdf version="1.4" >
+  <world name="default">
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+    <include>
+      <uri>model://sun</uri>
+    </include>
+    <include>
+      <uri>model://cafe_table</uri>
+      <name>cafe_table</name>
+      <pose>0 0 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://bowl</uri>
+      <name>bowl</name>
+      <pose>0.3 -0.25 0.775 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://beer</uri>
+      <name>beer</name>
+      <pose>0.3 0 0.775 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://wood_cube_10cm</uri>
+      <name>wood_cube_10cm</name>
+      <pose>0.3 0.25 0.775 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://camera</uri>
+      <name>camera</name>
+      <pose>0 0 1.278010 0 0.7 0</pose>
+    </include>
+  </world>
+</sdf>
