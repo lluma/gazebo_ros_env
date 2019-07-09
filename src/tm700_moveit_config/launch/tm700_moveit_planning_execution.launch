@@ -34,7 +34,7 @@
     </include>
   </group>
 
-  <!-- publish the robot state (tf transforms) -->
+<!--   publish the robot state (tf transforms) -->
   <group if="$(arg sim)">
     <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
   </group>

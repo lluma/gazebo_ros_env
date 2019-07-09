@@ -18,6 +18,11 @@
     <arg name="limited" value="$(arg limited)"/>
   </include>
 
+  <!-- send realsense urdf to param server -->
+  <param name="realsense_description" command="$(find xacro)/xacro '$(find realsense_gazebo_plugin)/urdf/rs200_simulation.xacro'" />
+  <!-- push realsense description to factory and spawn realsense in gazebo -->
+  <node name="spawn_realsense_model" pkg="gazebo_ros" type="spawn_model" args="-urdf -param realsense_description -model rs200" respawn="false" output="screen" />
+
   <!-- push robot_description to factory and spawn robot in gazebo -->
   <node name="spawn_gazebo_model" pkg="gazebo_ros" type="spawn_model" args="-urdf -param robot_description -model tm700 -x -0.15 -y 0 -z 0.778015" respawn="false" output="screen" />
 
