@@ -39,7 +39,18 @@
       <gravity>0</gravity>
       <selfCollide>true</selfCollide>
     </gazebo>
-
+    <gazebo reference="${prefix}gripper_link">
+      <gravity>0</gravity>
+      <selfCollide>true</selfCollide>
+    </gazebo>
+    <gazebo reference="${prefix}finger_r_link">
+      <gravity>0</gravity>
+      <selfCollide>true</selfCollide>
+    </gazebo>
+    <gazebo reference="${prefix}finger_l_link">
+      <gravity>0</gravity>
+      <selfCollide>true</selfCollide>
+    </gazebo>
   </xacro:macro>
 
 </robot>

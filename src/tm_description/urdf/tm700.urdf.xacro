@@ -313,115 +313,115 @@
     
     <!-- add compressing 2-jaw gripper -->
     
-<!--    <property name="gripper_joint_x" value="0" />-->
-<!--    <property name="gripper_joint_y" value="0" />-->
-<!--    <property name="gripper_joint_z" value="0.06" />-->
-<!--    -->
-<!--    <property name="gripper_roll" value="0" />-->
-<!--    <property name="gripper_pitch" value="${-pi/2}" />-->
-<!--    <property name="gripper_yaw" value="${-pi/2}" />-->
-<!--    -->
-<!--    <property name="finger_bias_x" value="-0.07285" />-->
-<!--    <property name="finger_bias_y" value="0.005" />-->
-<!--    <property name="finger_bias_z" value="0.07" />-->
-<!--    -->
-<!--    <property name="finger_r_joint_x" value="${finger_bias_x+0.07285}" />-->
-<!--    <property name="finger_r_joint_y" value="${finger_bias_y+0}" />-->
-<!--    <property name="finger_r_joint_z" value="${finger_bias_z+0.0050143}" />-->
-<!--    -->
-<!--    <property name="finger_l_joint_x" value="${finger_bias_x+0.07285}" />-->
-<!--    <property name="finger_l_joint_y" value="${finger_bias_y+0}" />-->
-<!--    <property name="finger_l_joint_z" value="${finger_bias_z+0.0050143}" />-->
-<!--    -->
-<!--    <link name="${prefix}gripper_link">-->
-<!--        <inertial>-->
-<!--            <origin rpy="0 0 0" xyz="0.0311572802112565 -1.25977280754998E-05 0.0092307003092138"/>-->
-<!--            <mass value="0.0795745052466434"/>-->
-<!--            <inertia ixx="3.27413333929741E-05" ixy="3.7314060486416E-08" ixz="3.97669066588691E-06" iyy="4.47182985231326E-05" iyz="-9.49992756213297E-09" izz="5.02142570756738E-05"/>-->
-<!--        </inertial>-->
-<!--        <visual>-->
-<!--            <origin rpy="${gripper_roll} ${gripper_pitch} ${gripper_yaw}" xyz="0 0 0"/>-->
-<!--            <geometry>-->
-<!--                <mesh filename="package://tm_description/meshes/gripper/gripper_link.STL"/>-->
-<!--            </geometry>-->
-<!--            <material name="">-->
-<!--                <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1"/>-->
-<!--            </material>-->
-<!--        </visual>-->
-<!--        <collision>-->
-<!--            <origin rpy="${gripper_roll} ${gripper_pitch} ${gripper_yaw}" xyz="0 0 0"/>-->
-<!--            <geometry>-->
-<!--                <mesh filename="package://tm_description/meshes/gripper/gripper_link.STL"/>-->
-<!--            </geometry>-->
-<!--        </collision>-->
-<!--    </link>-->
-<!--    <joint name="${prefix}gripper_joint" type="revolute">-->
-<!--        <origin rpy="0 0 0" xyz="${gripper_joint_x} ${gripper_joint_y} ${gripper_joint_z}"/>-->
-<!--        <parent link="${prefix}wrist_3_link"/>-->
-<!--        <child link="${prefix}gripper_link"/>-->
-<!--        <axis xyz="-1 0 0"/>-->
-<!--        <limit effort="1" lower="-1.57" upper="1.57" velocity="1"/>-->
-<!--    </joint>-->
-<!--    -->
-<!--    <link name="${prefix}finger_r_link">-->
-<!--        <inertial>-->
-<!--            <origin rpy="0 0 0" xyz="0.0100191457715113 -0.00843835347348892 -0.00483280251641866"/>-->
-<!--            <mass value="0.0121931459003602"/>-->
-<!--            <inertia ixx="6.74016278931418E-07" ixy="-2.36459038775023E-07" ixz="3.1480125304693E-09" iyy="3.10966297287339E-06" iyz="1.19271018871704E-10" izz="2.77935600332309E-06"/>-->
-<!--        </inertial>-->
-<!--        <visual>-->
-<!--            <origin rpy="${gripper_roll} ${gripper_pitch} ${gripper_yaw}" xyz="0 0 0"/>-->
-<!--            <geometry>-->
-<!--                <mesh filename="package://tm_description/meshes/gripper/finger_r.STL"/>-->
-<!--            </geometry>-->
-<!--            <material name="">-->
-<!--                <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1"/>-->
-<!--            </material>-->
-<!--        </visual>-->
-<!--        <collision>-->
-<!--            <origin rpy="${gripper_roll} ${gripper_pitch} ${gripper_yaw}" xyz="0 0 0"/>-->
-<!--            <geometry>-->
-<!--                <mesh filename="package://tm_description/meshes/gripper/finger_r.STL"/>-->
-<!--            </geometry>-->
-<!--        </collision>-->
-<!--    </link>-->
-<!--    <joint name="${prefix}finger_r_joint" type="prismatic">-->
-<!--        <origin rpy="0 0 0" xyz="${finger_r_joint_x} ${finger_r_joint_y} ${finger_r_joint_z}"/>-->
-<!--        <parent link="${prefix}gripper_link"/>-->
-<!--        <child link="${prefix}finger_r_link"/>-->
-<!--        <axis xyz="0 1 0"/>-->
-<!--        <limit effort="1" lower="-1" upper="0" velocity="1"/>-->
-<!--    </joint>-->
-<!--    -->
-<!--    <link name="${prefix}finger_l_link">-->
-<!--        <inertial>-->
-<!--            <origin rpy="0 0 0" xyz="0.0100191599590265 0.00643833435729511 -0.00483280251641866"/>-->
-<!--            <mass value="0.0121931459003603"/>-->
-<!--            <inertia ixx="6.74017180959932E-07" ixy="2.3646368440071E-07" ixz="3.14801230297432E-09" iyy="3.10966207084492E-06" iyz="-1.19277023229564E-10" izz="2.77935600332313E-06"/>-->
-<!--        </inertial>-->
-<!--        <visual>-->
-<!--            <origin rpy="${gripper_roll} ${gripper_pitch} ${gripper_yaw}" xyz="0 0 0"/>-->
-<!--            <geometry>-->
-<!--                <mesh filename="package://tm_description/meshes/gripper/finger_l.STL"/>-->
-<!--            </geometry>-->
-<!--            <material name="">-->
-<!--                <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1"/>-->
-<!--            </material>-->
-<!--        </visual>-->
-<!--        <collision>-->
-<!--            <origin rpy="${gripper_roll} ${gripper_pitch} ${gripper_yaw}" xyz="0 0 0"/>-->
-<!--            <geometry>-->
-<!--                <mesh filename="package://tm_description/meshes/gripper/finger_l.STL"/>-->
-<!--            </geometry>-->
-<!--        </collision>-->
-<!--    </link>-->
-<!--    <joint name="${prefix}finger_l_joint" type="prismatic">-->
-<!--        <origin rpy="0 0 0" xyz="${finger_l_joint_x} ${finger_l_joint_y} ${finger_l_joint_z}"/>-->
-<!--        <parent link="${prefix}gripper_link"/>-->
-<!--        <child link="${prefix}finger_l_link"/>-->
-<!--        <axis xyz="0 1 0"/>-->
-<!--        <limit effort="1" lower="0" upper="1" velocity="1"/>-->
-<!--    </joint>-->
+    <property name="gripper_joint_x" value="0" />
+    <property name="gripper_joint_y" value="0" />
+    <property name="gripper_joint_z" value="0.055" />
+    
+    <property name="gripper_roll" value="0" />
+    <property name="gripper_pitch" value="${-pi/2}" />
+    <property name="gripper_yaw" value="${-pi/2}" />
+    
+    <property name="finger_bias_x" value="-0.07285" />
+    <property name="finger_bias_y" value="0.005" />
+    <property name="finger_bias_z" value="0.07" />
+    
+    <property name="finger_r_joint_x" value="${finger_bias_x+0.07285}" />
+    <property name="finger_r_joint_y" value="${finger_bias_y+0}" />
+    <property name="finger_r_joint_z" value="${finger_bias_z+0.0050143}" />
+    
+    <property name="finger_l_joint_x" value="${finger_bias_x+0.07285}" />
+    <property name="finger_l_joint_y" value="${finger_bias_y+0}" />
+    <property name="finger_l_joint_z" value="${finger_bias_z+0.0050143}" />
+    
+    <link name="${prefix}gripper_link">
+        <inertial>
+            <origin rpy="0 0 0" xyz="0.0311572802112565 -1.25977280754998E-05 0.0092307003092138"/>
+            <mass value="0.0795745052466434"/>
+            <inertia ixx="3.27413333929741E-05" ixy="3.7314060486416E-08" ixz="3.97669066588691E-06" iyy="4.47182985231326E-05" iyz="-9.49992756213297E-09" izz="5.02142570756738E-05"/>
+        </inertial>
+        <visual>
+            <origin rpy="${gripper_roll} ${gripper_pitch} ${gripper_yaw}" xyz="0 0 0"/>
+            <geometry>
+                <mesh filename="package://tm_description/meshes/gripper/gripper_link.STL"/>
+            </geometry>
+            <material name="">
+                <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1"/>
+            </material>
+        </visual>
+        <collision>
+            <origin rpy="${gripper_roll} ${gripper_pitch} ${gripper_yaw}" xyz="0 0 0"/>
+            <geometry>
+                <mesh filename="package://tm_description/meshes/gripper/gripper_link.STL"/>
+            </geometry>
+        </collision>
+    </link>
+    <joint name="${prefix}gripper_joint" type="revolute">
+        <origin rpy="0 0 0" xyz="${gripper_joint_x} ${gripper_joint_y} ${gripper_joint_z}"/>
+        <parent link="${prefix}wrist_3_link"/>
+        <child link="${prefix}gripper_link"/>
+        <axis xyz="-1 0 0"/>
+        <limit effort="1" lower="-1.57" upper="1.57" velocity="1"/>
+    </joint>
+    
+    <link name="${prefix}finger_r_link">
+        <inertial>
+            <origin rpy="0 0 0" xyz="0.0100191457715113 -0.00843835347348892 -0.00483280251641866"/>
+            <mass value="0.0121931459003602"/>
+            <inertia ixx="6.74016278931418E-07" ixy="-2.36459038775023E-07" ixz="3.1480125304693E-09" iyy="3.10966297287339E-06" iyz="1.19271018871704E-10" izz="2.77935600332309E-06"/>
+        </inertial>
+        <visual>
+            <origin rpy="${gripper_roll} ${gripper_pitch} ${gripper_yaw}" xyz="0 0 0"/>
+            <geometry>
+                <mesh filename="package://tm_description/meshes/gripper/finger_r.STL"/>
+            </geometry>
+            <material name="">
+                <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1"/>
+            </material>
+        </visual>
+        <collision>
+            <origin rpy="${gripper_roll} ${gripper_pitch} ${gripper_yaw}" xyz="0 0 0"/>
+            <geometry>
+                <mesh filename="package://tm_description/meshes/gripper/finger_r.STL"/>
+            </geometry>
+        </collision>
+    </link>
+    <joint name="${prefix}finger_r_joint" type="prismatic">
+        <origin rpy="0 0 0" xyz="${finger_r_joint_x} ${finger_r_joint_y} ${finger_r_joint_z}"/>
+        <parent link="${prefix}gripper_link"/>
+        <child link="${prefix}finger_r_link"/>
+        <axis xyz="0 1 0"/>
+        <limit effort="1" lower="-1" upper="0" velocity="1"/>
+    </joint>
+    
+    <link name="${prefix}finger_l_link">
+        <inertial>
+            <origin rpy="0 0 0" xyz="0.0100191599590265 0.00643833435729511 -0.00483280251641866"/>
+            <mass value="0.0121931459003603"/>
+            <inertia ixx="6.74017180959932E-07" ixy="2.3646368440071E-07" ixz="3.14801230297432E-09" iyy="3.10966207084492E-06" iyz="-1.19277023229564E-10" izz="2.77935600332313E-06"/>
+        </inertial>
+        <visual>
+            <origin rpy="${gripper_roll} ${gripper_pitch} ${gripper_yaw}" xyz="0 0 0"/>
+            <geometry>
+                <mesh filename="package://tm_description/meshes/gripper/finger_l.STL"/>
+            </geometry>
+            <material name="">
+                <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1"/>
+            </material>
+        </visual>
+        <collision>
+            <origin rpy="${gripper_roll} ${gripper_pitch} ${gripper_yaw}" xyz="0 0 0"/>
+            <geometry>
+                <mesh filename="package://tm_description/meshes/gripper/finger_l.STL"/>
+            </geometry>
+        </collision>
+    </link>
+    <joint name="${prefix}finger_l_joint" type="prismatic">
+        <origin rpy="0 0 0" xyz="${finger_l_joint_x} ${finger_l_joint_y} ${finger_l_joint_z}"/>
+        <parent link="${prefix}gripper_link"/>
+        <child link="${prefix}finger_l_link"/>
+        <axis xyz="0 1 0"/>
+        <limit effort="1" lower="0" upper="1" velocity="1"/>
+    </joint>
 
     
     

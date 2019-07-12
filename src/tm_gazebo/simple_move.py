@@ -12,25 +12,25 @@ parser.add_argument("--reset", "-r", action="store_true", help="Reset the robot 
 def get_pose(pose_case, reset):
 
 	if reset:
-		poses = [[0.0, 0.0, 0.0, 0.0, 0.0, 0.0]]
+		poses = [[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]]
 		pose_name = "Reset"
 	else:
 		if pose_case == "move_base":
 
-			poses = [[0.0, 0.0, 0.0, 0.0, 0.0, 0.0],
-			         [pi/2, 0.0, 0.0, 0.0, 0.0, 0.0]]
+			poses = [[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0],
+			         [pi/2, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]]
 			pose_name = "Base turn 90 degree counterclockwise"
 
 		elif pose_case == "move_shoulder_1":
 
-			poses = [[0.0, 0.0, 0.0, 0.0, 0.0, 0.0],
-			         [0.0, pi/2, 0.0, 0.0, 0.0, 0.0]]
+			poses = [[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0],
+			         [0.0, pi/2, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]]
 			pose_name = "Shoulder 1 turn 90 degree counterclockwise"
 
 		elif pose_case == "move_shoulder_2":
 			
-			poses = [[0.0, 0.0, 0.0, 0.0, 0.0, 0.0],
-			         [0.0, 0.0, pi/2, 0.0, 0.0, 0.0]]
+			poses = [[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0],
+			         [0.0, 0.0, pi/2, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]]
 			pose_name = "Shoulder 2 turn 90 degree counterclockwise"
 			
 	return poses, pose_name
