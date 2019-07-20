@@ -60,7 +60,11 @@ catkin_package(
 
 ## Specify additional locations of header files
 ## Your package locations should be listed before other locations
-# include_directories(include ${catkin_INCLUDE_DIRS} ${Boost_INCLUDE_DIRS})
+# include_directories(
+#  include
+#    ${catkin_INCLUDE_DIRS} 
+#    ${Boost_INCLUDE_DIRS}
+#)
 
 ## Declare a cpp library
 # add_library(tm_gazebo
@@ -68,16 +72,16 @@ catkin_package(
 # )
 
 ## Declare a cpp executable
-# add_executable(tm_gazebo_node src/tm_gazebo_node.cpp)
+#add_executable(tm_gazebo src/tm_gazebo_control.cpp)
 
 ## Add cmake target dependencies of the executable/library
 ## as an example, message headers may need to be generated before nodes
-# add_dependencies(tm_gazebo_node tm_gazebo_generate_messages_cpp)
+#add_dependencies(tm_gazebo ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
 ## Specify libraries to link a library or executable target against
-# target_link_libraries(tm_gazebo_node
-#   ${catkin_LIBRARIES}
-# )
+#target_link_libraries(tm_gazebo
+#  ${catkin_LIBRARIES}
+#)
 
 #############
 ## Install ##

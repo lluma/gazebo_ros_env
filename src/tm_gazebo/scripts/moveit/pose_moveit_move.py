@@ -3,6 +3,7 @@ import copy
 import rospy
 import moveit_commander
 import moveit_msgs.msg
+import geometry_msgs.msg
 from math import pi
 from std_msgs.msg import String
 from moveit_commander.conversions import pose_to_list
@@ -27,18 +28,6 @@ def get_basic_info(move_group, robot):
 	print ("========== Printing robot state")
 	print (robot.get_current_state())
 	print ("")
-
-def get_goal(current_joint_values):
-	
-	goal = current_joint_values
-	goal[0] = 0
-	goal[1] = -pi/4
-	goal[2] = 0
-	goal[3] = -pi/2
-	goal[4] = 0
-	goal[5] = pi/3
-
-	return goal
 
 def main():
 	
@@ -68,16 +57,27 @@ def main():
 	# Getting some basic information
 	# get_basic_info(move_group, robot)
 	
-	# We can get the joint values from the group and adjust some of the values
-	joint_goal = get_goal(move_group.get_current_joint_values())
+	# We can get the end-effector's pose and set new pose for it
+	pose_goal = geometry_msgs.msg.Pose()
+	pose_goal.orientation.x = 0.0
+	pose_goal.position.x = 0.3
+	pose_goal.position.y = 0.25
+	pose_goal.position.z = 0.973985
+	
+	move_group.set_pose_target(pose_goal)
 	
 	# The go command can be called with joint values, poses, or without 
 	# any parameters if you have already set the pose or joint target for 
 	# the group
-	move_group.go(joint_goal, wait=True)
+	plan = move_group.go(wait=True)
 	
 	# Calling ``stop()`` ensures that there is no residual movement
 	move_group.stop()
+	
+	# It is always good to clear your targets after planning with poses.
+	# Note: there is no equivalent function for clear_joint_value_targets()
+	move_group.clear_pose_targets()
+
 
 if __name__ == "__main__":
 	main()

@@ -315,7 +315,7 @@
     
     <property name="gripper_joint_x" value="0" />
     <property name="gripper_joint_y" value="0" />
-    <property name="gripper_joint_z" value="0.055" />
+    <property name="gripper_joint_z" value="0.058" />
     
     <property name="gripper_roll" value="0" />
     <property name="gripper_pitch" value="${-pi/2}" />
@@ -323,7 +323,7 @@
     
     <property name="finger_bias_x" value="-0.07285" />
     <property name="finger_bias_y" value="0.005" />
-    <property name="finger_bias_z" value="0.07" />
+    <property name="finger_bias_z" value="0.068" />
     
     <property name="finger_r_joint_x" value="${finger_bias_x+0.07285}" />
     <property name="finger_r_joint_y" value="${finger_bias_y+0}" />
@@ -355,7 +355,7 @@
             </geometry>
         </collision>
     </link>
-    <joint name="${prefix}gripper_joint" type="revolute">
+    <joint name="${prefix}gripper_joint" type="fixed">
         <origin rpy="0 0 0" xyz="${gripper_joint_x} ${gripper_joint_y} ${gripper_joint_z}"/>
         <parent link="${prefix}wrist_3_link"/>
         <child link="${prefix}gripper_link"/>
@@ -385,11 +385,12 @@
             </geometry>
         </collision>
     </link>
+<!--prismatic-->
     <joint name="${prefix}finger_r_joint" type="prismatic">
         <origin rpy="0 0 0" xyz="${finger_r_joint_x} ${finger_r_joint_y} ${finger_r_joint_z}"/>
         <parent link="${prefix}gripper_link"/>
         <child link="${prefix}finger_r_link"/>
-        <axis xyz="0 1 0"/>
+        <axis xyz="1 0 0"/>
         <limit effort="1" lower="-1" upper="0" velocity="1"/>
     </joint>
     
@@ -415,11 +416,12 @@
             </geometry>
         </collision>
     </link>
+<!--prismatic-->
     <joint name="${prefix}finger_l_joint" type="prismatic">
         <origin rpy="0 0 0" xyz="${finger_l_joint_x} ${finger_l_joint_y} ${finger_l_joint_z}"/>
         <parent link="${prefix}gripper_link"/>
         <child link="${prefix}finger_l_link"/>
-        <axis xyz="0 1 0"/>
+        <axis xyz="1 0 0"/>
         <limit effort="1" lower="0" upper="1" velocity="1"/>
     </joint>
 

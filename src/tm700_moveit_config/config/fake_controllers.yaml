@@ -7,8 +7,7 @@ controller_list:
       - wrist_1_joint
       - wrist_2_joint
       - wrist_3_joint
-      - gripper_joint
-  - name: fake_gripper_controller
-    joints:
-      - finger_r_joint
-      - finger_l_joint
+#  - name: fake_gripper_controller
+#    joints:
+#      - finger_r_joint
+#      - finger_l_joint

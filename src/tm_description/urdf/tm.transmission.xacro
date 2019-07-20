@@ -63,15 +63,15 @@
       </actuator>
     </transmission>
 
-    <transmission name="${prefix}gripper_trans">
-      <type>transmission_interface/SimpleTransmission</type>
-      <joint name="${prefix}gripper_joint">
-        <hardwareInterface>PositionJointInterface</hardwareInterface>
-      </joint>
-      <actuator name="${prefix}gripper_motor">
-        <mechanicalReduction>1</mechanicalReduction>
-      </actuator>
-    </transmission>
+<!--    <transmission name="${prefix}gripper_trans">-->
+<!--      <type>transmission_interface/SimpleTransmission</type>-->
+<!--      <joint name="${prefix}gripper_joint">-->
+<!--        <hardwareInterface>PositionJointInterface</hardwareInterface>-->
+<!--      </joint>-->
+<!--      <actuator name="${prefix}gripper_motor">-->
+<!--        <mechanicalReduction>1</mechanicalReduction>-->
+<!--      </actuator>-->
+<!--    </transmission>-->
 
     <transmission name="${prefix}finger_r_trans">
       <type>transmission_interface/SimpleTransmission</type>
